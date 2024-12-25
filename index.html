@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback URL</title>
+</head>
+<body>
+    <h1>Authorization Successful</h1>
+    <p>Your authorization code is: <span id="auth-code"></span></p>
+
+    <script>
+        // Get the authorization code from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const authCode = urlParams.get('code');
+        
+        // Display the authorization code
+        document.getElementById('auth-code').textContent = authCode;
+    </script>
+</body>
+</html>
